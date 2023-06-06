@@ -18,7 +18,7 @@ def to_bin(directive : str):
         strr_bin = strr_bin + "1100110" + R[tokens[1]] + "10000" + R["R6"] + f"{bin(int(tokens[2],base=0))[2:]:0>8}"
         return strr_bin
     elif tokens[0] == "jnz":
-        strr_bin = strr_bin + "0100110" + R[tokens[1]] + "10000" + R["R6"] + f"{bin(int(tokens[2],base=0))[2:]:0>8}"
+        strr_bin = strr_bin + "1000110" + R[tokens[1]] + "10000" + R["R6"] + f"{bin(int(tokens[2],base=0))[2:]:0>8}"
         return strr_bin
     elif tokens[0] == "add":
         strr_bin = strr_bin + "0000010" + R[tokens[2]] + "0"+ R[tokens[3]] + "0" + R[tokens[1]] + "00000000"
