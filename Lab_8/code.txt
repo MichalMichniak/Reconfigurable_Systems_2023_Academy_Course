@@ -1,0 +1,13 @@
+nop
+jump R1
+jumpi 0x34
+jz R1, 0x34
+jnz R1, 0x34
+add R0, R1, R2
+addi R0, R1, 0x34
+and R0, R1, R2
+andi R0, R1, 0x34
+load R0, R1
+loadi R0, 0x34
+mov R0, R2
+movi R0, 0x34
