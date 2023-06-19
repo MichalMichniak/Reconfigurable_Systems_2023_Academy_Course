@@ -59,10 +59,10 @@ def translate(path):
                 continue
             directive = line if line[-1] != '\n' else line[:-1]
             lst.append(to_bin(directive))
-    with open("./code_bin.txt","w") as file:
+    with open("./code_bin_test.txt","w") as file:
         for i in lst:
             file.write(i + "\n")
-    with open("./verilog_code.txt","w") as file:
+    with open("./verilog_code_test.txt","w") as file:
         for n,i in enumerate(lst):
             file.write(f"assign program[{n}]=32'b"+ i +";\n")
     print(lst)
@@ -74,4 +74,4 @@ def translate(path):
 
 
 if __name__ == '__main__':
-    translate("./code.txt")
+    translate("./code_test.txt")
